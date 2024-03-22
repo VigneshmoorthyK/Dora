@@ -1,0 +1,6 @@
+framework module Pods_Dora {
+  umbrella header "Pods-Dora-umbrella.h"
+
+  export *
+  module * { export * }
+}

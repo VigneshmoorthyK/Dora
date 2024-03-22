@@ -7,20 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB3DE3A82B6E6C1900545301 /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3DE3A62B6E6C1900545301 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */; };
+		EB3DE3A92B6E6C1900545301 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3DE3A72B6E6C1900545301 /* PlayfairDisplay-VariableFont_wght.ttf */; };
+		EB9FBE5C2BA9867500EAC7E1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9FBE5B2BA9867500EAC7E1 /* SignUpViewController.swift */; };
 		EBB7498E2B5BFEBB00770325 /* DoraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7498D2B5BFEBB00770325 /* DoraApp.swift */; };
 		EBB749902B5BFEBC00770325 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7498F2B5BFEBC00770325 /* ContentView.swift */; };
 		EBB749922B5BFEBC00770325 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB749912B5BFEBC00770325 /* Item.swift */; };
 		EBB749942B5BFEBE00770325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB749932B5BFEBE00770325 /* Assets.xcassets */; };
 		EBB749972B5BFEBE00770325 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB749962B5BFEBE00770325 /* Preview Assets.xcassets */; };
+		EBD222FC2BA440DB004340B2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD222FB2BA440DB004340B2 /* Home.swift */; };
+		EBEF8E982BA5D146004DB5F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF8E972BA5D146004DB5F9 /* ApiService.swift */; };
+		EBEF8E9A2BA5D1A6004DB5F9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF8E992BA5D1A6004DB5F9 /* DataModel.swift */; };
+		EBF3479B2B931B86001CAB89 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3479A2B931B86001CAB89 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		911151D48700362C2432E8E5 /* Pods-Dora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dora.debug.xcconfig"; path = "Target Support Files/Pods-Dora/Pods-Dora.debug.xcconfig"; sourceTree = "<group>"; };
+		B1C4112FA5280EF05139B54D /* Pods_Dora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6051A01FE95371FFC8D4DDB /* Pods-Dora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dora.release.xcconfig"; path = "Target Support Files/Pods-Dora/Pods-Dora.release.xcconfig"; sourceTree = "<group>"; };
+		EB3DE3A62B6E6C1900545301 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EB3DE3A72B6E6C1900545301 /* PlayfairDisplay-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EB3DE3AA2B6E6FC100545301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EB9FBE5B2BA9867500EAC7E1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EBB7498A2B5BFEBB00770325 /* Dora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB7498D2B5BFEBB00770325 /* DoraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoraApp.swift; sourceTree = "<group>"; };
 		EBB7498F2B5BFEBC00770325 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBB749912B5BFEBC00770325 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EBB749932B5BFEBE00770325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB749962B5BFEBE00770325 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBD222FB2BA440DB004340B2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EBEF8E972BA5D146004DB5F9 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		EBEF8E992BA5D1A6004DB5F9 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		EBF3479A2B931B86001CAB89 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,11 +52,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37C092A4DF95A269D7BEAB4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				911151D48700362C2432E8E5 /* Pods-Dora.debug.xcconfig */,
+				C6051A01FE95371FFC8D4DDB /* Pods-Dora.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F75B5FF38348757FA208FA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C4112FA5280EF05139B54D /* Pods_Dora.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB3DE3A52B6E6BB300545301 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EB3DE3A62B6E6C1900545301 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */,
+				EB3DE3A72B6E6C1900545301 /* PlayfairDisplay-VariableFont_wght.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		EBB749812B5BFEBB00770325 = {
 			isa = PBXGroup;
 			children = (
 				EBB7498C2B5BFEBB00770325 /* Dora */,
 				EBB7498B2B5BFEBB00770325 /* Products */,
+				37C092A4DF95A269D7BEAB4B /* Pods */,
+				6F75B5FF38348757FA208FA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,11 +99,18 @@
 		EBB7498C2B5BFEBB00770325 /* Dora */ = {
 			isa = PBXGroup;
 			children = (
+				EB3DE3AA2B6E6FC100545301 /* Info.plist */,
+				EB3DE3A52B6E6BB300545301 /* Font */,
 				EBB7498D2B5BFEBB00770325 /* DoraApp.swift */,
 				EBB7498F2B5BFEBC00770325 /* ContentView.swift */,
+				EBEF8E972BA5D146004DB5F9 /* ApiService.swift */,
+				EBEF8E992BA5D1A6004DB5F9 /* DataModel.swift */,
+				EBF3479A2B931B86001CAB89 /* SignUp.swift */,
+				EB9FBE5B2BA9867500EAC7E1 /* SignUpViewController.swift */,
 				EBB749912B5BFEBC00770325 /* Item.swift */,
 				EBB749932B5BFEBE00770325 /* Assets.xcassets */,
 				EBB749952B5BFEBE00770325 /* Preview Content */,
+				EBD222FB2BA440DB004340B2 /* Home.swift */,
 			);
 			path = Dora;
 			sourceTree = "<group>";
@@ -77,6 +130,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB7499A2B5BFEBE00770325 /* Build configuration list for PBXNativeTarget "Dora" */;
 			buildPhases = (
+				1C4FDB45A501F056FFBD1C3C /* [CP] Check Pods Manifest.lock */,
 				EBB749862B5BFEBB00770325 /* Sources */,
 				EBB749872B5BFEBB00770325 /* Frameworks */,
 				EBB749882B5BFEBB00770325 /* Resources */,
@@ -128,19 +182,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3DE3A82B6E6C1900545301 /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */,
 				EBB749972B5BFEBE00770325 /* Preview Assets.xcassets in Resources */,
+				EB3DE3A92B6E6C1900545301 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
 				EBB749942B5BFEBE00770325 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C4FDB45A501F056FFBD1C3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dora-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBB749862B5BFEBB00770325 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEF8E9A2BA5D1A6004DB5F9 /* DataModel.swift in Sources */,
 				EBB749902B5BFEBC00770325 /* ContentView.swift in Sources */,
+				EB9FBE5C2BA9867500EAC7E1 /* SignUpViewController.swift in Sources */,
+				EBF3479B2B931B86001CAB89 /* SignUp.swift in Sources */,
+				EBEF8E982BA5D146004DB5F9 /* ApiService.swift in Sources */,
+				EBD222FC2BA440DB004340B2 /* Home.swift in Sources */,
 				EBB749922B5BFEBC00770325 /* Item.swift in Sources */,
 				EBB7498E2B5BFEBB00770325 /* DoraApp.swift in Sources */,
 			);
@@ -270,27 +356,33 @@
 		};
 		EBB7499B2B5BFEBE00770325 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911151D48700362C2432E8E5 /* Pods-Dora.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dora/Preview Content\"";
-				DEVELOPMENT_TEAM = YZ836567RL;
+				DEVELOPMENT_TEAM = 567C7FFGH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Dora/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = softsuave.Dora;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azzetta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,6 +391,7 @@
 		};
 		EBB7499C2B5BFEBE00770325 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6051A01FE95371FFC8D4DDB /* Pods-Dora.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -308,18 +401,23 @@
 				DEVELOPMENT_TEAM = YZ836567RL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Dora/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = softsuave.Dora;
+				PRODUCT_BUNDLE_IDENTIFIER = softsuave.dora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
