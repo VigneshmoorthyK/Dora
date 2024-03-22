@@ -7,6 +7,39 @@
 
 import SwiftUI
 
+struct SquareDesign : View {
+    let outerSize : CGFloat = 45;
+    let innerSize : CGFloat = 35;
+    let borderWidth : CGFloat = 1;
+    let leftToRight : Bool;
+    var body: some View{
+        HStack{
+            if leftToRight {
+                Spacer()
+            }
+            Rectangle()
+                .frame(width: outerSize, height: outerSize)
+                .foregroundColor(Color("background"))
+                .border(Color("black"),width: borderWidth)
+                .overlay(
+                    Rectangle()
+                        .frame(width: innerSize, height: innerSize)
+                        .foregroundColor(Color("background"))
+                        .border(Color("black"),width: borderWidth)
+                        .alignmentGuide(HorizontalAlignment.center, computeValue: { d in
+                            d[leftToRight ? .trailing : .leading]
+                        })
+                        .alignmentGuide(VerticalAlignment.center, computeValue: { d in
+                            d[leftToRight ? .leading : .trailing]
+                        }).shadow(radius: 1,x: leftToRight ? -5 : 5,y: leftToRight ? 5 : -2)
+                ).shadow(radius: 1,x: leftToRight ? -5 : 5,y: leftToRight ? 5 : -2)
+            if !leftToRight {
+                Spacer()
+            }
+        }
+    }
+}
+
 struct SignUp : View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var signupModel = SignUpViewController();
@@ -25,14 +58,8 @@ struct SignUp : View {
                 Color("background")
                     .ignoresSafeArea(.keyboard,edges: .bottom)
                 VStack{
-                    HStack(){
-                        Spacer()
-                        Image("sideline").resizable()
-                            .frame(width: 200,height: 230)
-                    }
+                   SquareDesign(leftToRight: true)
                     Spacer()
-                }
-                VStack{
                     HStack{
                         Button(action: {
                             presentationMode.wrappedValue.dismiss()
@@ -40,73 +67,75 @@ struct SignUp : View {
                             Image("arrow-left").resizable().frame(width: 34,height: 34)
                         })
                         Spacer()
-                    }.padding(.top,30)
-                        .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Error"), message: Text(signupModel.errorMessage), dismissButton: .default(Text("OK")))
-                        }
-                    TitleText(fontSize: 30, displayText: "Create Account!")
-                    TitleText(fontSize: 17, displayText: "Please, sign up to continue.")
-                    InputField(data: $userName, placeHolder: "Full Name", leftIcon: "")
-                    InputField(data: $email, placeHolder: "Email", leftIcon: "")
-                    InputField(data: $phoneNumber, placeHolder: "Phone Number", leftIcon: "",keyboardType: KeyboardType.phone)
-                    InputField(data: $password, placeHolder: "Password", leftIcon: "")
-                    InputField(data: $confirmPassword, placeHolder: "Confirm Password", leftIcon: "")
-                    RememberMe(isOn: $acceptTerms, text: "I Agree with privacy and policy", showForgotPassword: false)
-                    Button{
-                        signupModel.handleSignUp(email: email, userName: userName, phoneNumber: phoneNumber, password: password,confirmPassword: confirmPassword, termsAndPolicy: acceptTerms){ res in
-                            signupModel.showLoader = false;
-                            if !res.access_token.isEmpty {
-                                isSignedUp = true
+                    }.padding(.horizontal,30)
+                    ScrollView(.vertical,showsIndicators: false){
+                        VStack{
+                            TitleText(fontSize: 30, displayText: "Create Account!")
+                                .alert(isPresented: $showAlert) {
+                                    Alert(title: Text("Error"), message: Text(signupModel.errorMessage), dismissButton: .default(Text("OK")))
+                                }
+                            TitleText(fontSize: 17, displayText: "Please, sign up to continue.")
+                            InputField(data: $userName, placeHolder: "Full Name", leftIcon: "")
+                            InputField(data: $email, placeHolder: "Email", leftIcon: "")
+                            InputField(data: $phoneNumber, placeHolder: "Phone Number", leftIcon: "",keyboardType: KeyboardType.phone)
+                            InputField(data: $password, placeHolder: "Password", leftIcon: "")
+                            InputField(data: $confirmPassword, placeHolder: "Confirm Password", leftIcon: "")
+                            RememberMe(isOn: $acceptTerms, text: "I Agree with privacy and policy", showForgotPassword: false)
+                            Button{
+                                signupModel.handleSignUp(email: email, userName: userName, phoneNumber: phoneNumber, password: password,confirmPassword: confirmPassword, termsAndPolicy: acceptTerms){ res in
+                                    signupModel.showLoader = false;
+                                    if !res.access_token.isEmpty {
+                                        isSignedUp = true
+                                    }
+                                } onFailure: {error in
+                                    signupModel.showLoader = false;
+                                    showAlert = true
+                                }
+                                
+                            }label: {
+                                Text("Sign Up")
+                                    .foregroundColor(.white)
+                                    .padding(12)
+                                    .padding(.horizontal,100)
+                                    .font(.custom("PlayfairDisplay-Regular", size: 22))
+                                    .background(Color("button"))
+                                    .cornerRadius(50)
                             }
-                        } onFailure: {error in
-                            signupModel.showLoader = false;
-                            showAlert = true
-                        }
-                        
-                    }label: {
-                        Text("Sign Up")
-                            .foregroundColor(.white)
-                            .padding(12)
-                            .padding(.horizontal,100)
-                            .font(.custom("PlayfairDisplay-Regular", size: 22))
-                            .background(Color("button"))
-                            .cornerRadius(50)
+                            HStack{
+                                Text("Already have an account?")
+                                    .foregroundColor(Color("black"))
+                                    .font(.custom("PlayfairDisplay-Regular", size: 17))
+                                Button {
+                                    presentationMode.wrappedValue.dismiss()
+                                } label: {
+                                    Text("Sign In")
+                                        .foregroundColor(Color("black"))
+                                        .font(.custom("PlayfairDisplay-Regular", size: 17))
+                                        .opacity(0.5)
+                                }
+                                
+                                Spacer()
+                            }.padding(.top,10)
+                            Spacer()
+                        }.padding(.horizontal,30)
                     }
-                    HStack{
-                        Text("Already have an account?")
-                            .foregroundColor(Color("black"))
-                            .font(.custom("PlayfairDisplay-Regular", size: 17))
-                        Button {
-                            presentationMode.wrappedValue.dismiss()
-                        } label: {
-                            Text("Sign In")
-                                .foregroundColor(Color("black"))
-                                .font(.custom("PlayfairDisplay-Regular", size: 17))
-                                .opacity(0.5)
-                        }
-                        
-                        Spacer()
-                    }.padding(.top,10)
+                    .KeyboardResponsive()
                     Spacer()
-                }.padding(.horizontal,30)
-                    .padding(.top,30)
-                Spacer()
-                NavigationLink(destination: Home(), isActive: $isSignedUp){
-                    EmptyView()
+                    NavigationLink(destination: Home(), isActive: $isSignedUp){
+                        EmptyView()
+                    }
+                    .hidden()
+                    SquareDesign(leftToRight:false)
                 }
-                .hidden()
-                HStack{
-                    Image("sideline")
-                        .resizable()
-                        .rotationEffect(.degrees(180),anchor: .bottom)
-                        .frame(width: 200,height: 230)
-                    Spacer()
-                }.padding(.top,130)
+                    .ignoresSafeArea(.keyboard,edges: .bottom)
                 if signupModel.showLoader {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .scaleEffect(2)
                     .tint(.blue)}
+            }
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
         }
     }

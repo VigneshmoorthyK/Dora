@@ -186,15 +186,6 @@ struct ContentView: View {
                             TitleText(fontSize: 17, displayText: "Please, sign in to continue.")
                             InputField(data: $userName,placeHolder: "User name", leftIcon: "user")
                             InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
-                            InputField(data: $passWord, placeHolder: "Password", leftIcon: "lock")
                             RememberMe(isOn: $rememberMe, text: "Remember me", showForgotPassword: true)
                                 .alert(isPresented: $showAlert, content: {
                                     Alert(title: Text("Error").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/), message: Text(errorMsg))
@@ -203,9 +194,6 @@ struct ContentView: View {
                                 let api = ApiService();
                                 api.login(email: userName, password: passWord) { user in
                                     isLoggedIn = true
-                                    //                                EmptyView()
-                                    //                                    .background(
-                                    //                                    NavigationLink(destination: Home(), label: {EmptyView()}))
                                 } onFailure: {error in
                                     errorMsg = error;
                                     showAlert = true
@@ -262,6 +250,10 @@ struct ContentView: View {
                     }.clipped()
                 }
             }.ignoresSafeArea(.keyboard,edges: .all)
+        }
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil
+            )
         }
 //        .onChange(of: colorScheme, {
 //            globalColors.updateColors(for: colorScheme)
